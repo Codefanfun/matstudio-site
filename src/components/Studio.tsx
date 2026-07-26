@@ -21,16 +21,16 @@ export function Studio() {
           </p>
           <div className="mt-8 grid grid-cols-3 gap-4 sm:gap-8">
             <div>
-              <p className="text-2xl font-bold text-white sm:text-3xl">12+</p>
-              <p className="mt-1 text-xs text-white/50 sm:text-sm">Projects shipped</p>
+              <p className="text-2xl font-bold text-white sm:text-3xl">15+</p>
+              <p className="mt-1 text-xs text-white/50 sm:text-sm">Total Team</p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-white sm:text-3xl">6</p>
-              <p className="mt-1 text-xs text-white/50 sm:text-sm">Awards earned</p>
+              <p className="text-2xl font-bold text-white sm:text-3xl">13</p>
+              <p className="mt-1 text-xs text-white/50 sm:text-sm">Theater plays</p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-white sm:text-3xl">3</p>
-              <p className="mt-1 text-xs text-white/50 sm:text-sm">Continents reached</p>
+              <p className="text-2xl font-bold text-white sm:text-3xl">100+</p>
+              <p className="mt-1 text-xs text-white/50 sm:text-sm">Live shows</p>
             </div>
           </div>
         </motion.div>
@@ -44,7 +44,16 @@ export function Studio() {
         >
           <div className="aspect-square rounded-[2.5rem] bg-gradient-to-tr from-mat-blue/30 via-mat-cyan/20 to-mat-amber/20 p-1">
             <div className="flex h-full w-full flex-col items-center justify-center rounded-[2.3rem] bg-mat-black/80 p-8 text-center backdrop-blur-sm">
-              <span className="font-display text-7xl font-black text-white/10">MS</span>
+              <div className="relative mx-auto mb-6 flex h-32 w-32 items-center justify-center overflow-hidden rounded-2xl bg-black/30 ring-1 ring-white/10 sm:h-40 sm:w-40">
+                <img
+                  src="/matstudio-site/MATStudioLogo.jpeg"
+                  alt="MATstudio emblem"
+                  className="h-full w-full scale-125 object-cover object-[center_20%]"
+                  loading="lazy"
+                  width={160}
+                  height={160}
+                />
+              </div>
               <p className="mt-4 text-xl italic text-white/70">
                 “Animation is not about moving things. It’s about giving them a soul.”
               </p>

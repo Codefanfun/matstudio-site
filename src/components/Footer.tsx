@@ -10,20 +10,31 @@ export function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="rounded-3xl bg-gradient-to-br from-mat-blue to-mat-cyan p-8 text-mat-black sm:rounded-[2.5rem] sm:p-12 lg:p-16"
+          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-mat-blue to-mat-cyan p-8 text-mat-black sm:rounded-[2.5rem] sm:p-12 lg:p-16"
         >
-          <div className="max-w-2xl">
-            <h2 className="font-display text-2xl font-bold sm:text-4xl md:text-5xl">Let’s make something moving.</h2>
-            <p className="mt-4 text-base font-medium opacity-80 sm:text-lg">
-              Tell us what you’re building. We’ll bring the craft.
-            </p>
-            <a
-              href="mailto:hello@matstudio.example"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-mat-black px-6 py-3.5 text-sm font-bold text-white transition-transform hover:scale-105 active:scale-95 sm:px-8 sm:py-4"
-            >
-              <Mail size={18} />
-              hello@matstudio.example
-            </a>
+          <div className="relative z-10 grid items-center gap-10 lg:grid-cols-2">
+            <div>
+              <h2 className="font-display text-2xl font-bold sm:text-4xl md:text-5xl">Let’s make something moving.</h2>
+              <p className="mt-4 text-base font-medium opacity-80 sm:text-lg">
+                Share your vision with us. We’ll bring it to life.
+              </p>
+              <a
+                href="mailto:hello@matstudio.example"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-mat-black px-6 py-3.5 text-sm font-bold text-white transition-transform hover:scale-105 active:scale-95 sm:px-8 sm:py-4"
+              >
+                <Mail size={18} />
+                hello@matstudio.example
+              </a>
+            </div>
+            <div className="rounded-2xl bg-mat-black/10 p-6 backdrop-blur-sm ring-1 ring-mat-black/10">
+              <p className="text-xs font-semibold uppercase tracking-widest opacity-60">Production credits</p>
+              <ul className="mt-4 space-y-2 text-sm font-medium sm:text-base">
+                <li>Screenwriter & Creative Director: <span className="font-bold">Rafael Milo Amar</span></li>
+                <li>Art Director: <span className="font-bold">Israel Amar</span></li>
+                <li>Animation Director: <span className="font-bold">Sharon Amar</span></li>
+                <li>Executive Producer & Sales: <span className="font-bold">Sraia Tal</span></li>
+              </ul>
+            </div>
           </div>
         </motion.div>
 
@@ -35,12 +46,15 @@ export function Footer() {
           <div className="flex flex-col gap-3 text-sm text-white/60 sm:flex-row sm:gap-8">
             <span className="flex items-center gap-2">
               <MapPin size={16} />
-              Remote-first, Earth
+              Tel-Aviv, Israel
             </span>
-            <span className="flex items-center gap-2">
+            <a
+              href="tel:+972545303649"
+              className="flex items-center gap-2 transition-colors hover:text-white"
+            >
               <Phone size={16} />
-              +1 (555) 000-0000
-            </span>
+              +972-54-5303649
+            </a>
           </div>
         </div>
       </div>

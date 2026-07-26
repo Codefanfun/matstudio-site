@@ -39,7 +39,6 @@ export function Nav() {
               height={40}
             />
           </span>
-          <span className="hidden sm:inline">MATstudio</span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

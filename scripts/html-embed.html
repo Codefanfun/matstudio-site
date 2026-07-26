@@ -1,0 +1,33 @@
+<style>
+  html, body { margin: 0; padding: 0; background: #0a0a0c; }
+  #matstudio-wrap { position: relative; width: 100vw; min-height: 100vh; }
+  #matstudio-frame { width: 100%; border: 0; display: block; }
+</style>
+<div id="matstudio-wrap">
+  <iframe id="matstudio-frame" src="https://codefanfun.github.io/matstudio-site/?v=2" allow="fullscreen" loading="eager" scrolling="no"></iframe>
+</div>
+<script>
+  (function () {
+    const frame = document.getElementById('matstudio-frame');
+    if (!frame) return;
+    let lastHeight = 0;
+    const setHeight = (height) => {
+      const px = Math.max(Math.round(height), window.innerHeight) + 'px';
+      if (frame.style.height !== px) {
+        frame.style.height = px;
+      }
+    };
+    window.addEventListener('message', (e) => {
+      if (e.data && e.data.type === 'matstudio-resize' && typeof e.data.height === 'number') {
+        setHeight(e.data.height);
+      }
+    });
+    // Stretch to a generous fallback while waiting for the first message
+    setHeight(5000);
+    frame.addEventListener('load', () => {
+      setTimeout(() => {
+        frame.contentWindow.postMessage({ type: 'request-matstudio-resize' }, '*');
+      }, 200);
+    });
+  })();
+</script>

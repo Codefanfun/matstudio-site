@@ -26,7 +26,7 @@ export function Studio() {
             </div>
             <div>
               <p className="text-2xl font-bold text-white sm:text-3xl">13</p>
-              <p className="mt-1 text-xs text-white/50 sm:text-sm">Theater plays</p>
+              <p className="mt-1 text-xs text-white/50 sm:text-sm">Theatre plays</p>
             </div>
             <div>
               <p className="text-2xl font-bold text-white sm:text-3xl">100+</p>
@@ -46,9 +46,9 @@ export function Studio() {
             <div className="flex h-full w-full flex-col items-center justify-center rounded-[2.3rem] bg-mat-black/80 p-8 text-center backdrop-blur-sm">
               <div className="relative mx-auto mb-6 flex h-32 w-32 items-center justify-center overflow-hidden rounded-2xl bg-black/30 ring-1 ring-white/10 sm:h-40 sm:w-40">
                 <img
-                  src="/matstudio-site/MATStudioLogo.jpeg"
+                  src="/matstudio-site/MATStudioLogo-crop.jpg"
                   alt="MATstudio emblem"
-                  className="h-full w-full scale-125 object-cover object-[center_20%]"
+                  className="h-full w-full object-cover"
                   loading="lazy"
                   width={160}
                   height={160}

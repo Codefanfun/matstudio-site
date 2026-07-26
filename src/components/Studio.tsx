@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 export function Studio() {
   return (
-    <section id="studio" className="relative overflow-hidden bg-mat-night px-6 py-28">
-      <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
+    <section id="studio" className="relative overflow-hidden bg-mat-night px-4 py-20 sm:px-6 sm:py-28">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <motion.div
           initial={{ opacity: 1, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -11,26 +11,26 @@ export function Studio() {
           transition={{ duration: 0.8 }}
         >
           <p className="text-sm font-semibold uppercase tracking-widest text-mat-cyan">The studio</p>
-          <h2 className="mt-4 font-display text-4xl font-bold leading-tight text-white sm:text-5xl">
+          <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
             We believe every pixel should earn its place in the story.
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-white/70">
+          <p className="mt-6 text-base leading-relaxed text-white/70 sm:text-lg">
             MATstudio is a small team of directors, designers, and developers who turn
             ideas into cinematic digital experiences. From the first sketch to the final
             render, we chase clarity, emotion, and a little bit of wonder.
           </p>
-          <div className="mt-8 grid grid-cols-3 gap-8">
+          <div className="mt-8 grid grid-cols-3 gap-4 sm:gap-8">
             <div>
-              <p className="text-3xl font-bold text-white">12+</p>
-              <p className="mt-1 text-sm text-white/50">Projects shipped</p>
+              <p className="text-2xl font-bold text-white sm:text-3xl">12+</p>
+              <p className="mt-1 text-xs text-white/50 sm:text-sm">Projects shipped</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-white">6</p>
-              <p className="mt-1 text-sm text-white/50">Awards earned</p>
+              <p className="text-2xl font-bold text-white sm:text-3xl">6</p>
+              <p className="mt-1 text-xs text-white/50 sm:text-sm">Awards earned</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-white">3</p>
-              <p className="mt-1 text-sm text-white/50">Continents reached</p>
+              <p className="text-2xl font-bold text-white sm:text-3xl">3</p>
+              <p className="mt-1 text-xs text-white/50 sm:text-sm">Continents reached</p>
             </div>
           </div>
         </motion.div>

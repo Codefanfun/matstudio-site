@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Nav } from "./components/Nav";
 import { Hero } from "./components/Hero";
+import { FeatureProject } from "./components/FeatureProject";
 import { Projects } from "./components/Projects";
 import { Studio } from "./components/Studio";
 import { Footer } from "./components/Footer";
@@ -37,6 +38,7 @@ function App() {
       <Nav />
       <main>
         <Hero />
+        <FeatureProject />
         <Projects />
         <Studio />
       </main>

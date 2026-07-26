@@ -29,11 +29,17 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
-        <a href="#" className="flex items-center gap-2 text-xl font-bold tracking-tight text-white">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-mat-blue to-mat-cyan text-xs font-black text-mat-black">
-            MS
+        <a href="#" className="flex items-center gap-3 text-xl font-bold tracking-tight text-white">
+          <span className="relative h-10 w-10 overflow-hidden rounded-xl bg-white shadow-lg shadow-mat-blue/20 ring-1 ring-white/20">
+            <img
+              src="/matstudio-site/MATStudioLogo-crop.jpg"
+              alt="MATstudio"
+              className="h-full w-full object-cover object-top"
+              width={40}
+              height={40}
+            />
           </span>
-          MATstudio
+          <span className="hidden sm:inline">MATstudio</span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -47,11 +53,11 @@ export function Nav() {
             </a>
           ))}
           <a
-            href="#work"
+            href="#feature-project"
             className="flex items-center gap-1.5 rounded-full bg-white px-5 py-2 text-sm font-semibold text-mat-black transition-transform hover:scale-105"
           >
             <Play size={14} fill="currentColor" />
-            Watch reel
+            Watch Real
           </a>
         </nav>
 

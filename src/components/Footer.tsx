@@ -19,11 +19,11 @@ export function Footer() {
                 Share your vision with us. We’ll bring it to life.
               </p>
               <a
-                href="mailto:hello@matstudio.example"
+                href="mailto:mat.studio365@gmail.com"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-mat-black px-6 py-3.5 text-sm font-bold text-white transition-transform hover:scale-105 active:scale-95 sm:px-8 sm:py-4"
               >
                 <Mail size={18} />
-                hello@matstudio.example
+                mat.studio365@gmail.com
               </a>
             </div>
             <div className="rounded-2xl bg-mat-black/10 p-6 backdrop-blur-sm ring-1 ring-mat-black/10">

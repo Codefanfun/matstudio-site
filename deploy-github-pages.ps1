@@ -10,13 +10,16 @@ Remove-Item -Recurse -Force $tmp -ErrorAction SilentlyContinue
 Copy-Item -Path "$PSScriptRoot\dist" -Destination $tmp -Recurse
 
 Set-Location $tmp
-git init
-git remote add origin https://github.com/Codefanfun/matstudio-site.git 2>&1 | Out-Null
+$oldEap = $ErrorActionPreference
+$ErrorActionPreference = "SilentlyContinue"
+git init *> $null
+git remote add origin https://github.com/Codefanfun/matstudio-site.git *> $null
 git config user.name "Codefanfun"
 git config user.email "matstudio@localhost"
-git checkout -b gh-pages 2>&1 | Out-Null
+git checkout -b gh-pages *> $null
 git add .
-git commit -m "Update MATstudio GitHub Pages" 2>&1 | Out-Null
+git commit -m "Update MATstudio GitHub Pages" *> $null
+$ErrorActionPreference = $oldEap
 git push -f origin gh-pages
 
 Set-Location $PSScriptRoot

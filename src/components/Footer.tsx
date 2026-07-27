@@ -50,7 +50,7 @@ export function Footer() {
           <div className="relative z-10 flex flex-col gap-2 text-base text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.9)] sm:flex-row sm:gap-8 sm:text-lg md:text-base">
             <span className="flex items-center gap-2">
               <MapPin size={18} />
-              Tel-Aviv, Israel
+              Tel Aviv, Israel
             </span>
             <a
               href="tel:+972545303649"

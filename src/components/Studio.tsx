@@ -26,7 +26,7 @@ export function Studio() {
             </div>
             <div className="text-center sm:text-left">
               <p className="text-2xl font-bold text-white sm:text-3xl">13</p>
-              <p className="mt-1 text-xs text-white/50 sm:text-sm">Theatre plays</p>
+              <p className="mt-1 text-xs text-white/50 sm:text-sm">Theater plays</p>
             </div>
             <div className="text-center sm:text-left">
               <p className="text-2xl font-bold text-white sm:text-3xl">27</p>

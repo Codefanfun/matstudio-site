@@ -38,12 +38,18 @@ export function Footer() {
           </div>
         </motion.div>
 
-        <div className="mt-12 flex flex-col justify-between gap-6 border-t border-white/10 pt-8 sm:mt-16 sm:gap-8 sm:pt-10 md:flex-row md:items-center">
-          <div>
+        <div className="relative mt-12 flex flex-col justify-between gap-6 overflow-hidden rounded-2xl border-t border-white/10 bg-mat-black pt-8 sm:mt-16 sm:gap-8 sm:pt-10 md:flex-row md:items-center md:px-8 md:py-8">
+          <div
+            className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: 'url(/matstudio-site/LALO_Header.jpeg)' }}
+            aria-hidden="true"
+          />
+          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/80 via-black/60 to-black/80" aria-hidden="true" />
+          <div className="relative drop-shadow-lg">
             <p className="text-lg font-bold text-white sm:text-xl">MATstudio</p>
-            <p className="mt-1 text-sm text-white/40">© {new Date().getFullYear()} MATstudio. All rights reserved.</p>
+            <p className="mt-1 text-sm text-white/90">© {new Date().getFullYear()} MATstudio. All rights reserved.</p>
           </div>
-          <div className="flex flex-col gap-3 text-sm text-white/60 sm:flex-row sm:gap-8">
+          <div className="relative flex flex-col gap-3 text-sm text-white/90 drop-shadow-lg sm:flex-row sm:gap-8">
             <span className="flex items-center gap-2">
               <MapPin size={16} />
               Tel-Aviv, Israel

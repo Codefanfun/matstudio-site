@@ -43,21 +43,18 @@ export function Studio() {
           className="relative"
         >
           <div className="aspect-square rounded-[2.5rem] bg-gradient-to-tr from-mat-blue/30 via-mat-cyan/20 to-mat-amber/20 p-1">
-            <div className="flex h-full w-full flex-col items-center justify-center rounded-[2.3rem] bg-mat-black/80 p-8 text-center backdrop-blur-sm">
-              <div className="relative mx-auto mb-6 flex h-32 w-32 items-center justify-center overflow-hidden rounded-2xl bg-black/30 ring-1 ring-white/10 sm:h-40 sm:w-40">
+            <div className="flex h-full w-full flex-col items-center justify-center gap-4 rounded-[2.3rem] bg-mat-black/80 p-8 text-center backdrop-blur-sm">
+              <div className="relative h-[80%] w-full overflow-hidden rounded-2xl bg-black/30 ring-1 ring-white/10">
                 <img
                   src="/matstudio-site/MATStudioLogo-crop.jpg"
                   alt="MATstudio emblem"
                   className="h-full w-full object-cover"
                   loading="lazy"
-                  width={160}
-                  height={160}
                 />
               </div>
-              <p className="mt-4 text-xl italic text-white/70">
+              <p className="text-xl italic leading-snug text-white/70">
                 “Animation is not about moving things. It’s about giving them a soul.”
               </p>
-              <p className="mt-4 text-sm font-semibold text-white/40">— MATstudio manifesto</p>
             </div>
           </div>
         </motion.div>

@@ -1,0 +1,8 @@
+<script>
+(function() {
+  const t = document.querySelector('title');
+  if (t && t.textContent === 'My Framer Site') t.remove();
+  const m = document.querySelector('meta[name="description"]');
+  if (m && m.content === 'Made with Framer') m.remove();
+})();
+</script>

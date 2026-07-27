@@ -39,7 +39,7 @@ export function Footer() {
         </motion.div>
 
         <div
-          className="relative mt-12 flex min-h-[16rem] flex-col justify-between gap-5 overflow-hidden rounded-2xl border-t border-white/10 bg-cover bg-center bg-no-repeat px-6 py-8 sm:mt-16 md:aspect-[2048/683] md:min-h-0 md:flex-row md:items-center md:justify-between md:gap-8 md:p-8 lg:p-10"
+          className="relative mt-12 flex min-h-[16rem] flex-col justify-between gap-5 overflow-hidden rounded-2xl border-t border-white/10 bg-cover bg-center bg-no-repeat px-6 py-8 sm:mt-16 md:aspect-[2048/341] md:min-h-0 md:flex-row md:items-center md:justify-between md:gap-8 md:p-8 lg:p-10"
           style={{ backgroundImage: 'url(/matstudio-site/LALO_Header.jpeg)' }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/45 to-black/65" aria-hidden="true" />

@@ -15,6 +15,13 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (min-width: 1024px) {
+  /* Slightly scale down the desktop UI for a crisper, more professional density. */
+  html {
+    font-size: 87.5%;
+  }
+}
+
 body {
   background-color: var(--color-mat-black);
   color: var(--color-mat-cream);

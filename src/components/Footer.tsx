@@ -38,13 +38,13 @@ export function Footer() {
           </div>
         </motion.div>
 
-        <div className="relative mt-12 flex flex-col justify-between gap-6 overflow-hidden rounded-2xl border-t border-white/10 bg-mat-black pt-8 sm:mt-16 sm:gap-8 sm:pt-10 md:flex-row md:items-center md:px-8 md:py-8">
+        <div className="relative mt-12 flex flex-col justify-between gap-6 overflow-hidden rounded-2xl border-t border-white/10 pt-8 sm:mt-16 sm:gap-8 sm:pt-10 md:flex-row md:items-center md:px-8 md:py-8">
           <div
-            className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: 'url(/matstudio-site/LALO_Header.jpeg)' }}
             aria-hidden="true"
           />
-          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/50 via-black/35 to-black/50" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/35 to-black/50" aria-hidden="true" />
           <div className="relative [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">
             <p className="text-lg font-bold text-white sm:text-xl">MATstudio</p>
             <p className="mt-1 text-sm text-white">© {new Date().getFullYear()} MATstudio. All rights reserved.</p>

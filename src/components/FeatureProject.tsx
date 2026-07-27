@@ -6,6 +6,7 @@ export function FeatureProject() {
   const sectionRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [showPoster, setShowPoster] = useState(true);
+  const [muted, setMuted] = useState(true);
   const isInView = useInView(sectionRef, { amount: 0.45, margin: "-80px" });
 
   useEffect(() => {
@@ -24,10 +25,12 @@ export function FeatureProject() {
     }
   }, [isInView]);
 
-  const handlePlayClick = () => {
+  const unmuteAndPlay = () => {
     const video = videoRef.current;
     if (!video) return;
+    setMuted(false);
     setShowPoster(false);
+    video.muted = false;
     video.play().catch(() => {});
   };
 
@@ -77,10 +80,11 @@ export function FeatureProject() {
               ref={videoRef}
               src="/matstudio-site/LALO_Trailer1.mp4"
               poster="/matstudio-site/frames/frame-4.jpg"
-              muted
+              muted={muted}
               playsInline
               controls
               onPlay={handleVideoPlay}
+              onClick={unmuteAndPlay}
               className="absolute inset-0 h-full w-full object-cover"
               preload="metadata"
             />
@@ -88,9 +92,9 @@ export function FeatureProject() {
             {showPoster && (
               <button
                 type="button"
-                onClick={handlePlayClick}
+                onClick={unmuteAndPlay}
                 className="absolute inset-0 z-10 flex items-center justify-center bg-black/30 transition-colors group-hover:bg-black/20"
-                aria-label="Play trailer"
+                aria-label="Play trailer with sound"
               >
                 <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 text-mat-black shadow-xl backdrop-blur-sm transition-transform group-hover:scale-110 sm:h-20 sm:w-20">
                   <Play size={28} fill="currentColor" className="ml-1" />

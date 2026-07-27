@@ -43,8 +43,8 @@ export function Studio() {
           className="relative"
         >
           <div className="aspect-square rounded-[2.5rem] bg-gradient-to-tr from-mat-blue/30 via-mat-cyan/20 to-mat-amber/20 p-1">
-            <div className="flex h-full w-full flex-col items-center justify-center gap-4 rounded-[2.3rem] bg-mat-black/80 p-8 text-center backdrop-blur-sm">
-              <div className="relative h-[80%] w-full overflow-hidden rounded-2xl bg-black/30 ring-1 ring-white/10">
+            <div className="flex h-full w-full flex-col overflow-hidden rounded-[2.3rem] bg-white text-center">
+              <div className="h-[80%] w-full overflow-hidden rounded-t-[2.3rem]">
                 <img
                   src="/matstudio-site/MATStudioLogo.jpeg"
                   alt="MATstudio emblem"
@@ -52,9 +52,11 @@ export function Studio() {
                   loading="lazy"
                 />
               </div>
-              <p className="text-xl italic leading-snug text-white/70">
-                “Animation is not about moving things. It’s about giving them a soul.”
-              </p>
+              <div className="flex flex-1 items-center justify-center px-6">
+                <p className="text-base italic leading-snug text-mat-black/80 sm:text-lg">
+                  “Animation is not about moving things. It’s about giving them a soul.”
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>

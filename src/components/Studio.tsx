@@ -19,16 +19,20 @@ export function Studio() {
             ideas into cinematic digital experiences. From the first sketch to the final
             render, we chase clarity, emotion, and a little bit of wonder.
           </p>
-          <div className="mt-8 grid grid-cols-3 gap-4 sm:gap-8">
-            <div>
+          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-8">
+            <div className="text-center sm:text-left">
               <p className="text-2xl font-bold text-white sm:text-3xl">15+</p>
               <p className="mt-1 text-xs text-white/50 sm:text-sm">Total Team</p>
             </div>
-            <div>
+            <div className="text-center sm:text-left">
               <p className="text-2xl font-bold text-white sm:text-3xl">13</p>
               <p className="mt-1 text-xs text-white/50 sm:text-sm">Theatre plays</p>
             </div>
-            <div>
+            <div className="text-center sm:text-left">
+              <p className="text-2xl font-bold text-white sm:text-3xl">27</p>
+              <p className="mt-1 text-xs text-white/50 sm:text-sm">Screenplays</p>
+            </div>
+            <div className="text-center sm:text-left">
               <p className="text-2xl font-bold text-white sm:text-3xl">100+</p>
               <p className="mt-1 text-xs text-white/50 sm:text-sm">Live shows</p>
             </div>

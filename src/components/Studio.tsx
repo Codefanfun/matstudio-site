@@ -22,7 +22,7 @@ export function Studio() {
           <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-8">
             <div className="text-center sm:text-left">
               <p className="text-2xl font-bold text-white sm:text-3xl">15+</p>
-              <p className="mt-1 text-xs text-white/50 sm:text-sm">Total Team</p>
+              <p className="mt-1 text-xs text-white/50 sm:text-sm">Team members</p>
             </div>
             <div className="text-center sm:text-left">
               <p className="text-2xl font-bold text-white sm:text-3xl">13</p>

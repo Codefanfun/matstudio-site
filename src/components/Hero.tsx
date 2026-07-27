@@ -89,7 +89,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-mat-black shadow-lg shadow-black/20 transition-transform hover:scale-105 active:scale-95"
           >
             <Play size={16} fill="currentColor" />
-            Watch Real
+            Watch trailer
           </a>
           <a
             href="#work"

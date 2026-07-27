@@ -23,7 +23,7 @@ const headHTML = `
 (function() {
   const setOnce = function() {
     document.title = 'MATstudio | Animation & Story Studio | Tel Aviv';
-    let d = document.querySelector('meta[name=\"description\"]');
+    let d = document.querySelector('meta[name="description"]');
     if (!d) { d = document.createElement('meta'); d.name = 'description'; document.head.appendChild(d); }
     d.content = 'MATstudio is a Tel Aviv animation and story studio crafting bold characters, cinematic visuals, and design systems for films, series, games, and brands.';
   };

@@ -8,22 +8,39 @@ const bodyHTML = `
   const title = 'MATstudio | Animation & Story Studio | Tel Aviv';
   const description = 'MATstudio is a Tel Aviv animation and story studio crafting bold characters, cinematic visuals, and design systems for films, series, games, and brands.';
   const ogDescription = 'MATstudio crafts bold characters, cinematic animation, and design systems that move people.';
-  function setOrUpdateMeta(selector, attr, value, prop) {
+  const ogImage = 'https://mat-studio.framer.media/matstudio-site/LALO_Header.jpeg';
+  const url = 'https://mat-studio.framer.media/';
+
+  function setOrUpdateMeta(selector, attr, value) {
     let el = document.querySelector(selector);
     if (!el) {
       el = document.createElement('meta');
-      if (prop) el.setAttribute('property', prop);
-      if (attr) el.setAttribute(attr, value);
+      if (selector.startsWith('meta[property="')) {
+        el.setAttribute('property', selector.split('"')[1]);
+      } else {
+        el.setAttribute('name', selector.split('"')[1]);
+      }
       document.head.appendChild(el);
     }
-    if (el.getAttribute(attr || 'content') !== value) el.setAttribute(attr || 'content', value);
+    if (el.getAttribute(attr) !== value) el.setAttribute(attr, value);
   }
+
   function fix() {
     if (document.title !== title) document.title = title;
-    setOrUpdateMeta('meta[name="description"]', 'content', description, null);
-    setOrUpdateMeta('meta[property="og:description"]', 'content', ogDescription, 'og:description');
-    setOrUpdateMeta('meta[name="robots"]', 'content', 'index, follow', null);
+
+    setOrUpdateMeta('meta[name="description"]', 'content', description);
+    setOrUpdateMeta('meta[name="robots"]', 'content', 'index, follow');
+
+    setOrUpdateMeta('meta[property="og:title"]', 'content', title);
+    setOrUpdateMeta('meta[property="og:description"]', 'content', ogDescription);
+    setOrUpdateMeta('meta[property="og:url"]', 'content', url);
+    setOrUpdateMeta('meta[property="og:image"]', 'content', ogImage);
+
+    setOrUpdateMeta('meta[name="twitter:title"]', 'content', title);
+    setOrUpdateMeta('meta[name="twitter:description"]', 'content', ogDescription);
+    setOrUpdateMeta('meta[name="twitter:image"]', 'content', ogImage);
   }
+
   fix();
   window.addEventListener('load', fix);
   setTimeout(fix, 1000);

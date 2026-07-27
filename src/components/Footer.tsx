@@ -44,19 +44,19 @@ export function Footer() {
             style={{ backgroundImage: 'url(/matstudio-site/LALO_Header.jpeg)' }}
             aria-hidden="true"
           />
-          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/80 via-black/60 to-black/80" aria-hidden="true" />
-          <div className="relative drop-shadow-lg">
+          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/50 via-black/35 to-black/50" aria-hidden="true" />
+          <div className="relative [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">
             <p className="text-lg font-bold text-white sm:text-xl">MATstudio</p>
-            <p className="mt-1 text-sm text-white/90">© {new Date().getFullYear()} MATstudio. All rights reserved.</p>
+            <p className="mt-1 text-sm text-white">© {new Date().getFullYear()} MATstudio. All rights reserved.</p>
           </div>
-          <div className="relative flex flex-col gap-3 text-sm text-white/90 drop-shadow-lg sm:flex-row sm:gap-8">
+          <div className="relative flex flex-col gap-3 text-sm text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.9)] sm:flex-row sm:gap-8">
             <span className="flex items-center gap-2">
               <MapPin size={16} />
               Tel-Aviv, Israel
             </span>
             <a
               href="tel:+972545303649"
-              className="flex items-center gap-2 transition-colors hover:text-white"
+              className="flex items-center gap-2 transition-colors hover:text-white/90"
             >
               <Phone size={16} />
               +972-54-5303649

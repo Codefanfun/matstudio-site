@@ -38,27 +38,25 @@ export function Footer() {
           </div>
         </motion.div>
 
-        <div className="relative mt-12 flex flex-col justify-between gap-6 overflow-hidden rounded-2xl border-t border-white/10 pt-8 sm:mt-16 sm:gap-8 sm:pt-10 md:flex-row md:items-center md:px-8 md:py-8">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: 'url(/matstudio-site/LALO_Header.jpeg)' }}
-            aria-hidden="true"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/35 to-black/50" aria-hidden="true" />
-          <div className="relative [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">
-            <p className="text-lg font-bold text-white sm:text-xl">MATstudio</p>
-            <p className="mt-1 text-sm text-white">© {new Date().getFullYear()} MATstudio. All rights reserved.</p>
+        <div
+          className="relative mt-12 flex min-h-[16rem] flex-col justify-between gap-5 overflow-hidden rounded-2xl border-t border-white/10 bg-cover bg-center bg-no-repeat px-6 py-8 sm:mt-16 md:aspect-[2048/683] md:min-h-0 md:flex-row md:items-center md:justify-between md:gap-8 md:p-8 lg:p-10"
+          style={{ backgroundImage: 'url(/matstudio-site/LALO_Header.jpeg)' }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/45 to-black/65" aria-hidden="true" />
+          <div className="relative z-10 [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">
+            <p className="text-2xl font-bold text-white sm:text-3xl md:text-2xl lg:text-3xl">MATstudio</p>
+            <p className="mt-1 text-base text-white sm:text-lg md:text-base lg:text-lg">© {new Date().getFullYear()} MATstudio. All rights reserved.</p>
           </div>
-          <div className="relative flex flex-col gap-3 text-sm text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.9)] sm:flex-row sm:gap-8">
+          <div className="relative z-10 flex flex-col gap-2 text-base text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.9)] sm:flex-row sm:gap-8 sm:text-lg md:text-base">
             <span className="flex items-center gap-2">
-              <MapPin size={16} />
+              <MapPin size={18} />
               Tel-Aviv, Israel
             </span>
             <a
               href="tel:+972545303649"
               className="flex items-center gap-2 transition-colors hover:text-white/90"
             >
-              <Phone size={16} />
+              <Phone size={18} />
               +972-54-5303649
             </a>
           </div>

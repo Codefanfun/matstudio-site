@@ -1,11 +1,10 @@
 import { motion, useInView } from "framer-motion";
-import { Play, Sparkles } from "lucide-react";
+import { Sparkles, Volume2, VolumeX } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 
 export function FeatureProject() {
   const sectionRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [showPoster, setShowPoster] = useState(true);
   const [muted, setMuted] = useState(true);
   const isInView = useInView(sectionRef, { amount: 0.45, margin: "-80px" });
 
@@ -13,21 +12,41 @@ export function FeatureProject() {
     const video = videoRef.current;
     if (!video) return;
 
-    if (!isInView) {
+    if (isInView) {
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Autoplay may be blocked by browser policy; show poster until user interacts.
+        });
+      }
+    } else {
       video.pause();
     }
   }, [isInView]);
 
-  const unmuteAndPlay = () => {
+  const unmute = () => {
     const video = videoRef.current;
     if (!video) return;
     setMuted(false);
-    setShowPoster(false);
     video.muted = false;
-    video.play().catch(() => {});
+    if (video.paused) {
+      video.play().catch(() => {});
+    }
   };
 
-  const handleVideoPlay = () => setShowPoster(false);
+  const toggleMute = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    const next = !video.muted;
+    setMuted(next);
+    video.muted = next;
+  };
+
+  const handleVolumeChange = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    setMuted(video.muted);
+  };
 
   return (
     <section
@@ -66,34 +85,34 @@ export function FeatureProject() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.9, delay: 0.1 }}
-          className="group relative overflow-hidden rounded-2xl bg-mat-night shadow-2xl shadow-black/40 ring-1 ring-white/10 sm:rounded-3xl"
+          className="group relative cursor-pointer overflow-hidden rounded-2xl bg-mat-night shadow-2xl shadow-black/40 ring-1 ring-white/10 sm:rounded-3xl"
+          onClick={unmute}
         >
           <div className="relative aspect-video w-full">
             <video
               ref={videoRef}
               src="/matstudio-site/LALO_Trailer1.mp4"
-              poster="/matstudio-site/frames/frame-4.jpg"
               muted={muted}
+              autoPlay
               playsInline
               controls
-              onPlay={handleVideoPlay}
-              onClick={unmuteAndPlay}
+              onVolumeChange={handleVolumeChange}
               className="absolute inset-0 h-full w-full object-cover"
               preload="metadata"
             />
 
-            {showPoster && (
-              <button
-                type="button"
-                onClick={unmuteAndPlay}
-                className="absolute inset-0 z-10 flex items-center justify-center bg-black/30 transition-colors group-hover:bg-black/20"
-                aria-label="Play trailer with sound"
-              >
-                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 text-mat-black shadow-xl backdrop-blur-sm transition-transform group-hover:scale-110 sm:h-20 sm:w-20">
-                  <Play size={28} fill="currentColor" className="ml-1" />
-                </span>
-              </button>
-            )}
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleMute();
+              }}
+              className="absolute right-3 top-3 z-20 flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm transition-colors hover:bg-black/80 sm:right-4 sm:top-4 sm:px-4 sm:py-2 sm:text-sm"
+              aria-label={muted ? "Unmute trailer" : "Mute trailer"}
+            >
+              {muted ? <VolumeX size={16} /> : <Volume2 size={16} />}
+              <span className="hidden sm:inline">{muted ? "Unmute" : "Sound on"}</span>
+            </button>
           </div>
 
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-mat-black/90 via-mat-black/40 to-transparent px-5 pb-5 pt-16 sm:px-8 sm:pb-8">

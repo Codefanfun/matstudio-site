@@ -28,7 +28,7 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
-        <a href="#" className="text-xl font-bold tracking-tight text-white">
+        <a href="#" className="text-2xl font-bold tracking-tight text-white md:text-xl">
           MATstudio
         </a>
 

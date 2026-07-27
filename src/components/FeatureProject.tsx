@@ -13,14 +13,7 @@ export function FeatureProject() {
     const video = videoRef.current;
     if (!video) return;
 
-    if (isInView) {
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          // Autoplay may be blocked by browser policy; show poster until user interacts.
-        });
-      }
-    } else {
+    if (!isInView) {
       video.pause();
     }
   }, [isInView]);

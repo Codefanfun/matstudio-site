@@ -11,30 +11,30 @@ export function Studio() {
           transition={{ duration: 0.8 }}
         >
           <p className="text-sm font-semibold uppercase tracking-widest text-mat-cyan">The studio</p>
-          <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
+          <h2 className="mt-4 font-display text-4xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
             We believe every pixel should earn its place in the story.
           </h2>
-          <p className="mt-6 text-base leading-relaxed text-white/70 sm:text-lg">
+          <p className="mt-6 text-lg leading-relaxed text-white/70 sm:text-lg">
             MATstudio is a small team of directors, designers, and developers who turn
             ideas into cinematic digital experiences. From the first sketch to the final
             render, we chase clarity, emotion, and a little bit of wonder.
           </p>
           <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-8">
             <div className="text-center sm:text-left">
-              <p className="text-2xl font-bold text-white sm:text-3xl">15+</p>
-              <p className="mt-1 text-xs text-white/50 sm:text-sm">Team members</p>
+              <p className="text-3xl font-bold text-white sm:text-3xl">15+</p>
+              <p className="mt-1 text-sm text-white/50 sm:text-sm">Team members</p>
             </div>
             <div className="text-center sm:text-left">
-              <p className="text-2xl font-bold text-white sm:text-3xl">13</p>
-              <p className="mt-1 text-xs text-white/50 sm:text-sm">Theater plays</p>
+              <p className="text-3xl font-bold text-white sm:text-3xl">13</p>
+              <p className="mt-1 text-sm text-white/50 sm:text-sm">Theater plays</p>
             </div>
             <div className="text-center sm:text-left">
-              <p className="text-2xl font-bold text-white sm:text-3xl">27</p>
-              <p className="mt-1 text-xs text-white/50 sm:text-sm">Screenplays</p>
+              <p className="text-3xl font-bold text-white sm:text-3xl">27</p>
+              <p className="mt-1 text-sm text-white/50 sm:text-sm">Screenplays</p>
             </div>
             <div className="text-center sm:text-left">
-              <p className="text-2xl font-bold text-white sm:text-3xl">100+</p>
-              <p className="mt-1 text-xs text-white/50 sm:text-sm">Live shows</p>
+              <p className="text-3xl font-bold text-white sm:text-3xl">100+</p>
+              <p className="mt-1 text-sm text-white/50 sm:text-sm">Live shows</p>
             </div>
           </div>
         </motion.div>
@@ -57,7 +57,7 @@ export function Studio() {
                 />
               </div>
               <div className="flex flex-1 items-center justify-center px-6">
-                <p className="text-base italic leading-snug text-mat-black/80 sm:text-lg">
+                <p className="text-lg italic leading-snug text-mat-black/80 sm:text-lg">
                   “Animation is not about moving things. It’s about giving them a soul.”
                 </p>
               </div>

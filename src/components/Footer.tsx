@@ -14,21 +14,21 @@ export function Footer() {
         >
           <div className="relative z-10 grid items-center gap-10 lg:grid-cols-2">
             <div>
-              <h2 className="font-display text-2xl font-bold sm:text-4xl md:text-5xl">Let’s make something moving.</h2>
-              <p className="mt-4 text-base font-medium opacity-80 sm:text-lg">
+              <h2 className="font-display text-4xl font-bold sm:text-4xl md:text-5xl">Let’s make something moving.</h2>
+              <p className="mt-4 text-lg font-medium opacity-80 sm:text-lg">
                 Share your vision with us. We’ll bring it to life.
               </p>
               <a
                 href="mailto:mat.studio365@gmail.com"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-mat-black px-6 py-3.5 text-sm font-bold text-white transition-transform hover:scale-105 active:scale-95 sm:px-8 sm:py-4"
+                className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-mat-black px-6 py-3.5 text-base font-bold text-white transition-transform hover:scale-105 active:scale-95 sm:px-8 sm:py-4"
               >
-                <Mail size={18} />
+                <Mail size={20} />
                 mat.studio365@gmail.com
               </a>
             </div>
             <div className="rounded-2xl bg-mat-black/10 p-6 backdrop-blur-sm ring-1 ring-mat-black/10">
-              <p className="text-xs font-semibold uppercase tracking-widest opacity-60">Production credits</p>
-              <ul className="mt-4 space-y-2 text-sm font-medium sm:text-base">
+              <p className="text-sm font-semibold uppercase tracking-widest opacity-60">Production credits</p>
+              <ul className="mt-4 space-y-2 text-base font-medium sm:text-base">
                 <li>Screenwriter & Creative Director: <span className="font-bold">Rafael Milo Amar</span></li>
                 <li>Art Director: <span className="font-bold">Israel Amar</span></li>
                 <li>Animation Director: <span className="font-bold">Sharon Amar</span></li>
@@ -44,19 +44,19 @@ export function Footer() {
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/45 to-black/65" aria-hidden="true" />
           <div className="relative z-10 [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">
-            <p className="text-2xl font-bold text-white sm:text-3xl md:text-2xl lg:text-3xl">MATstudio</p>
-            <p className="mt-1 text-base text-white sm:text-lg md:text-base lg:text-lg">© {new Date().getFullYear()} MATstudio. All rights reserved.</p>
+            <p className="text-3xl font-bold text-white sm:text-3xl md:text-2xl lg:text-3xl">MATstudio</p>
+            <p className="mt-1 text-lg text-white sm:text-lg md:text-base lg:text-lg">© {new Date().getFullYear()} MATstudio. All rights reserved.</p>
           </div>
-          <div className="relative z-10 flex flex-col gap-2 text-base text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.9)] sm:flex-row sm:gap-8 sm:text-lg md:text-base">
+          <div className="relative z-10 flex flex-col gap-2 text-lg text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.9)] sm:flex-row sm:gap-8 sm:text-lg md:text-base">
             <span className="flex items-center gap-2">
-              <MapPin size={18} />
+              <MapPin size={20} />
               Tel Aviv, Israel
             </span>
             <a
               href="tel:+972545303649"
               className="flex items-center gap-2 transition-colors hover:text-white/90"
             >
-              <Phone size={18} />
+              <Phone size={20} />
               +972-54-5303649
             </a>
           </div>

@@ -52,7 +52,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-mat-cyan sm:text-sm"
+          className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-mat-cyan sm:text-sm"
         >
           Animated Feature Studio
         </motion.p>
@@ -72,7 +72,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.6 }}
-          className="mx-auto mt-6 max-w-2xl text-base text-white/80 sm:text-lg md:text-xl"
+          className="mx-auto mt-6 max-w-2xl text-lg text-white/80 sm:text-lg md:text-xl"
         >
           MATstudio crafts cinematic animated worlds where every frame is a step
           toward the story you were meant to see.

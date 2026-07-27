@@ -63,19 +63,19 @@ export function FeatureProject() {
           className="mb-8 flex flex-col items-start justify-between gap-4 sm:mb-12 sm:flex-row sm:items-end"
         >
           <div>
-            <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-mat-cyan sm:text-sm">
+              <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-mat-cyan sm:text-sm">
               <Sparkles size={14} />
               Now previewing
             </p>
             <h2 className="mt-2 font-display text-3xl font-bold text-white sm:text-4xl md:text-5xl">
               Feature project
             </h2>
-            <p className="mt-2 max-w-xl text-base text-white/60 sm:text-lg">
+            <p className="mt-2 max-w-xl text-lg text-white/60 sm:text-lg">
               The Adventure of Lalo in the Magical Forest — our latest animated
               feature about courage, friendship, and the worlds we have yet to imagine.
             </p>
           </div>
-          <span className="rounded-full bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white/60 ring-1 ring-white/10">
+          <span className="rounded-full bg-white/5 px-4 py-1.5 text-sm font-semibold uppercase tracking-wider text-white/60 ring-1 ring-white/10">
             Feature film
           </span>
         </motion.div>

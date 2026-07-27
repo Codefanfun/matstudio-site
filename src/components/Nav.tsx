@@ -37,7 +37,7 @@ export function Nav() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-white/70 transition-colors hover:text-white"
+              className="text-base font-medium text-white/70 transition-colors hover:text-white"
             >
               {link.label}
             </a>
@@ -45,11 +45,11 @@ export function Nav() {
         </nav>
 
         <button
-          className="text-white md:hidden"
+          className="grid h-11 w-11 place-items-center text-white md:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((s) => !s)}
         >
-          {open ? <X /> : <Menu />}
+          {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
@@ -66,7 +66,7 @@ export function Nav() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-lg font-medium text-white/80"
+                  className="text-xl font-medium text-white/80"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}

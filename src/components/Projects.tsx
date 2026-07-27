@@ -56,11 +56,11 @@ export function Projects() {
           transition={{ duration: 0.8 }}
           className="mb-12 max-w-3xl sm:mb-16"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mat-cyan sm:text-sm">Selected work</p>
-          <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl md:text-5xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-mat-cyan sm:text-sm">Selected work</p>
+          <h2 className="mt-3 font-display text-4xl font-bold text-white sm:text-4xl md:text-5xl">
             Frames from Lalo’s world
           </h2>
-          <p className="mt-4 text-base text-white/60 sm:text-lg">
+          <p className="mt-4 text-lg text-white/60 sm:text-lg">
             Four favorite moments from our feature project — each one a doorway into the adventure.
           </p>
         </motion.div>
@@ -92,11 +92,11 @@ export function Projects() {
                 </div>
               </div>
               <div className="p-4 sm:p-6">
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-white/40 sm:text-xs">
+                <p className="text-xs font-semibold uppercase tracking-wider text-white/40 sm:text-xs">
                   {frame.category}
                 </p>
-                <h3 className="mt-1.5 text-lg font-bold text-white sm:text-xl">{frame.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/60">{frame.description}</p>
+                <h3 className="mt-1.5 text-xl font-bold text-white sm:text-xl">{frame.title}</h3>
+                <p className="mt-2 text-base leading-relaxed text-white/60 sm:text-sm">{frame.description}</p>
               </div>
             </motion.article>
           ))}

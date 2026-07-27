@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+/* Base font size bump for phones/tablets inside the Framer iframe,
+   which reports a desktop-width viewport. 1rem = 18px on small screens
+   so default text remains legible, then returns to standard 16px at sm+. */
+@media (max-width: 639px) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
 @theme {
   --color-mat-black: #0a0a0c;
   --color-mat-night: #12121a;
